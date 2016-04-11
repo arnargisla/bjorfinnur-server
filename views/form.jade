@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  h1= title
+  form(method="post")
+    p Fylltu út reitina svo við getum sagt þér hvort þú hafir gert það rétt.
+    p ATH: Það verður að fyĺla út reiti merkta með stjörnu(*)
+    p
+      label
+        | Nafn*: 
+        input(type="text" placeholder="anonymous" name="nameText" value=nameText)
+        | 
+        span(class="error")= nameTexterror
+    p
+      label
+        | Netfang*: 
+        input(type="text" placeholder="anon@nowhere.com" name="email" value=email)
+        | 
+        span(class="error")= emailerror
+    p
+      label
+        | Heimilisfang*: 
+        input(type="text" placeholder="Some Cave, Lost Mountain, 45665 Narnia, Universe" name="address" value=address)
+        | 
+        span(class="error")= addresserror
+    div 
+      h4
+        | Tegund heimilis: 
+      span(class="error")= typeerror
+      p
+        label
+          if fjolbyliChecked
+            input(type="radio", value="fjolbyli" name="hometype" checked="checked")
+          else
+            input(type="radio", value="fjolbyli" name="hometype" )
+          | Fjölbýli
+      p
+        label
+          if tvibyliChecked
+            input(type="radio", value="tvibyli" name="hometype" checked="checked")
+          else
+            input(type="radio", value="tvibyli" name="hometype" )
+          | Tvíbýli
+      p
+        label
+          if einbyliChecked
+            input(type="radio", value="einbyli" name="hometype" checked="checked")
+          else
+            input(type="radio", value="einbyli" name="hometype" )
+          | Einbýli
+
+    p
+      label
+        | Sími: 
+        input(type="text", placeholder="555-5555" name="phone" value=phone)
+        | 
+        span(class="error")= phoneerror
+    p
+      input(type="submit" value="Láta upplýsingar af hendi!")
+  p(class="successMessage")= successMessage

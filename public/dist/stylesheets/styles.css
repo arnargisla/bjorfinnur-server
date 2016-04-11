@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px; }
+
+body {
+  padding: 50px;
+  font: 1.4rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ccc; }
+
+label {
+  display: block; }
+
+span.error {
+  color: red; }
+
+p.successMessage {
+  color: green; }

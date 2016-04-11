@@ -1,0 +1,22 @@
+##Server:
+#Tækni
+- Bakendi: nodejs og postgres
+- Framendi: Bootstram og html
+
+#Virkni:
+Birta form þar sem hægt er að:
+- breyta bjórum
+- bæta við bjórum
+- breyta stöðum
+- bæta við stöðum
+Serverinn þarf líka að geta 'servað' skrá með gögnunum
+
+Mál á dagskrá:
+- setja upp nodejs
+- setja upp postgres
+- tengja saman nodejs og postgres
+- ákveða format á json
+- búa til js script sem smíðar json skrána
+- búa til Java klasa sem kann að lesa json skrána
+- setja upp html form
+- tengja saman html form og gagnagrunn
