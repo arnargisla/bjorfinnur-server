@@ -4,16 +4,20 @@ var express = require('express');
 var router = express.Router();
 
 var validate = require('../lib/validate.js');
+var database = require('../lib/database.js'); // hleður inn skránni lib/database.js
+// Nú er hægt að nota föll úr database með database.fall(params);
 
 /* GET /form */
-router.get('/', function(req, res) {
+router.get('/', function(req, res) { // <- svarar get á /form
+  // # Renderar skrána í views/form.jade. 
+  // # Seinna viðfangið er til þess að láta form.jade fá hluti til að birta
   res.render('form', { title: 'Bjorfinnur' });
 });
 
 /* POST /form */
-router.post('/', function(req, res) {
+router.post('/', function(req, res) { // <- svarar post á /form
 
-
+  // Hér mætti bæta við gagnagrunninn.
 
   var thereAreNoErrors = true;
   // errorcheck name
@@ -85,6 +89,8 @@ router.post('/', function(req, res) {
     data.successMessage = 'Flott! öll gögnin eru á réttu formi!';
   }
 
+  // # Renderar skrána í views/form.jade. 
+  // # Seinna viðfangið er til þess að láta form.jade fá hluti til að birta
   res.render('form', data);
 });
 

@@ -20,3 +20,13 @@ Mál á dagskrá:
 - búa til Java klasa sem kann að lesa json skrána
 - setja upp html form
 - tengja saman html form og gagnagrunn
+
+
+## Guide
+Einu skrárnar sem þarf að breyta til að búa til form til að bæta í gagnagrunninn eru:
+- lib/database.js
+  skilgreinir aðgerðir á gagnagrunninn
+- routers/form.js
+  skilgreinir hvað gerist þegar einhver fer inn á síðuna 
+- views/form.jade
+  stýrir uppsetningu á forminu
